@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
+//Provides requirement of being logged in (withAuth) to access certain features of blog
 const withAuth = require("../utils/auth");
 const { Post, User, Comment } = require("../models");
 
-// We'll hardcode the loggedIn property as true on this route, because a user won't even be able to get to
-// the dashboard page unless they're logged in.
+//Prevents users from accessing Dashboard w/out being logged in
 router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
@@ -28,7 +28,6 @@ router.get("/", withAuth, (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      // serialize data before passing to template
       const posts = dbPostData.map((post) => post.get({ plain: true }));
       res.render("dashboard", { posts, loggedIn: true });
     })
@@ -38,7 +37,6 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
-// find a single post
 router.get("/edit/:id", withAuth, (req, res) => {
   Post.findOne({
     where: {
@@ -62,11 +60,9 @@ router.get("/edit/:id", withAuth, (req, res) => {
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: "There's no post found with that id" });
         return;
       }
-
-      // serialize the data
       const post = dbPostData.get({ plain: true });
 
       res.render("edit-post", {
@@ -80,7 +76,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
     });
 });
 
-// add a single post
+
 router.get("/new/", withAuth, (req, res) => {
   res.render("new-post", {
     loggedIn: true,
