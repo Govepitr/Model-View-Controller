@@ -45,8 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 
-// turn on connection to db and server
-// force:true, drops and re-creates all of the database tables and associations on startup.
+// If you update ({force: false}) to ({force: true}) it will drop and re-create all of the database tables/associations on startup.
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Now listening to ${PORT}, ooh that is my JAM!`));  
 });
