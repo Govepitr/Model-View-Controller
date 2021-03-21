@@ -1,1 +1,3 @@
-## tech_blog
+# Model-View-Controller
+
+Initial Develop push
