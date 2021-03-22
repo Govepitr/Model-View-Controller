@@ -20,9 +20,9 @@ app.set('view engine', 'handlebars');
 
 // maxAge allows for timeout of session if idle for 30 seconds
 const sess = {
-  secret: 'A secret lost to time.',
+  secret: 'I will take this secret to the grave.',
   cookie: {
-    maxAge: 60000
+    maxAge: 120000
   },
   resave: false,
   saveUninitialized: true,
