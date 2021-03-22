@@ -9,12 +9,12 @@ body, html {
   margin: 0;
   font-family: sans-serif;
   /* fallback for old browsers */
-  background-color: #667db6;
+  background: #667db6;
   /* Chrome 10-25, Safari 5.1-6 */
-  background-color: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
+  background: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+ Safari 7+ */
-  background-color: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
-  color: rgb(102, 112, 240);
+  background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6); 
+  color: rgb(32, 38, 119);
 }
 .wrapper {
   width: 100%;
@@ -28,11 +28,11 @@ header {
   display: flex;
   flex-flow: row wrap;  
   /* fallback for old browsers */
-  background-color: #43C6AC;
+  background: #43C6AC;
   /* Chrome 10-25, Safari 5.1-6 */
-  background-color: -webkit-linear-gradient(to left, #191654, #43C6AC);
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-color: linear-gradient(to left, #191654, #43C6AC);
+  background: linear-gradient(to right, #191654, #43C6AC);
   color: rgb(144, 224, 218);
   justify-content: left;
   align-items: left;
@@ -63,7 +63,7 @@ nav a:hover {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: rgb(52, 141, 135);
+  color: rgb(144, 224, 218);
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -77,11 +77,11 @@ nav a:hover {
 
 button {  
   /* fallback for old browsers */
-  background-color: #525252;
+  background: #525252;
   /* Chrome 10-25, Safari 5.1-6 */
-  background-color: -webkit-linear-gradient(to left, #3d72b4, #525252);
+  background: -webkit-linear-gradient(to left, #3d72b4, #525252);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-color: linear-gradient(to left, #3d72b4, #525252);
+  background: linear-gradient(to left, #3d72b4, #525252);
   border: 0;
   padding: 1%;
   color:white;
@@ -102,11 +102,11 @@ button:hover {
 .title-wrapper h1 {
   font-size: 2em;
   /* fallback for old browsers */
-  background-color: #667db6;
+  background: #667db6;
   /* Chrome 10-25, Safari 5.1-6 */
-  background-color: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
+  background: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+ Safari 7+ */
-  background-color: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
+  background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
   margin: 16px;
   padding: 2px;
   border-radius: 5px;
@@ -114,7 +114,7 @@ button:hover {
 }
 
 .title-wrapper h1 a {
-  color: rgb(102, 112, 240);
+  color: rgb(40, 48, 148);
 } 
 .title-wrapper h1 a:hover {
   color: rgb(11, 15, 73);
@@ -122,7 +122,7 @@ button:hover {
 
 .edit-post-form a, .meta a, .post-new a {
   text-decoration: none;
-  color:  rgb(20, 136, 204);
+  color:  rgb(11, 31, 43);
   font-weight: bold;
   transition: color .1s;
 }
@@ -134,7 +134,7 @@ button:hover {
 .post-new a {
   padding: .5%;
   border-radius: 5px;
-  border: 1px solid  rgb(20, 136, 204);
+  border: 1px solid  rgb(7, 96, 148);
 }
 
 .post-new a:hover {
@@ -148,12 +148,12 @@ button:hover {
 
 .title h2 a {
   text-decoration: none;
-  color: rgb(102, 112, 240);
+  color: rgb(15, 19, 62);
   transition: color .1s;
 }
 
 .title h2 a:hover {
-  color: rgb(11, 15, 73);
+  color: rgb(22, 108, 134);
 }
 
 .post-list {
@@ -212,7 +212,13 @@ main {
 }
 
 .post .title h2 {
-  background-color:rgb(102, 112, 240);
+  /* fallback for old browsers */
+  background: #1a6585;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+
   color: rgb(11, 15, 73);
   padding: 4px;
   margin: 0;
