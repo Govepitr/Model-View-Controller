@@ -1,5 +1,4 @@
-// needed because counting up votes??
-const sequelize = require("../../config/connection");
+const sequelize = require("../../config/connection.js");
 
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");

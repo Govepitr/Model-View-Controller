@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
+const sequelize = require('../config/connection');
 //Provides requirement of being logged in (withAuth) to access certain features of blog
 const withAuth = require("../utils/auth");
 const { Post, User, Comment } = require("../models");
